@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,8 @@
 		C09A1D642598B1F900CBAB0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A1D632598B1F900CBAB0A /* ContentView.swift */; };
 		C09A1D662598B1FC00CBAB0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C09A1D652598B1FC00CBAB0A /* Assets.xcassets */; };
 		C09A1D692598B1FC00CBAB0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C09A1D682598B1FC00CBAB0A /* Preview Assets.xcassets */; };
+		C09A1D8A2598D39800CBAB0A /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A1D892598D39800CBAB0A /* ModelData.swift */; };
+		C09A1D8E2598D5F800CBAB0A /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = C09A1D8D2598D5F800CBAB0A /* SwiftUIRefresh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		C09A1D652598B1FC00CBAB0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C09A1D682598B1FC00CBAB0A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C09A1D6A2598B1FC00CBAB0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C09A1D892598D39800CBAB0A /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C09A1D8E2598D5F800CBAB0A /* SwiftUIRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +61,7 @@
 				C09A1D652598B1FC00CBAB0A /* Assets.xcassets */,
 				C09A1D6A2598B1FC00CBAB0A /* Info.plist */,
 				C09A1D672598B1FC00CBAB0A /* Preview Content */,
+				C09A1D892598D39800CBAB0A /* ModelData.swift */,
 			);
 			path = "Pull to Refresh";
 			sourceTree = "<group>";
@@ -85,6 +90,9 @@
 			dependencies = (
 			);
 			name = "Pull to Refresh";
+			packageProductDependencies = (
+				C09A1D8D2598D5F800CBAB0A /* SwiftUIRefresh */,
+			);
 			productName = "Pull to Refresh";
 			productReference = C09A1D5E2598B1F900CBAB0A /* Pull to Refresh.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +120,9 @@
 				Base,
 			);
 			mainGroup = C09A1D552598B1F900CBAB0A;
+			packageReferences = (
+				C09A1D8C2598D5F800CBAB0A /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
+			);
 			productRefGroup = C09A1D5F2598B1F900CBAB0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +151,7 @@
 			files = (
 				C09A1D642598B1F900CBAB0A /* ContentView.swift in Sources */,
 				C09A1D622598B1F900CBAB0A /* Pull_to_RefreshApp.swift in Sources */,
+				C09A1D8A2598D39800CBAB0A /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +340,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C09A1D8C2598D5F800CBAB0A /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUIRefresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C09A1D8D2598D5F800CBAB0A /* SwiftUIRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C09A1D8C2598D5F800CBAB0A /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
+			productName = SwiftUIRefresh;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C09A1D562598B1F900CBAB0A /* Project object */;
 }

@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SwiftUIListView.swift
 //  Pull to Refresh
 //
 //  Created by Abdul R. Arraisi on 27/12/20.
@@ -8,7 +8,8 @@
 import SwiftUI
 import SwiftUIRefresh
 
-struct ContentView: View {
+struct SwiftUIListView: View {
+    
     @State private var results = [Result]()
     @State private var isLoading = false
     
@@ -20,8 +21,9 @@ struct ContentView: View {
                 Text(item.collectionName)
             }
         }
-        .pullToRefresh(isShowing: self.$isLoading) {
-            DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+        .background(Color.gray)
+        .pullToRefresh(isShowing: $isLoading) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 loadData()
                 self.isLoading = false
             }
@@ -60,8 +62,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SwiftUIListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SwiftUIListView()
     }
 }
